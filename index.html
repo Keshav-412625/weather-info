@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather-Cast</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="default-theme">
+    <main class="app-container">
+        <h1>Weather-Cast</h1>
+        
+        <div class="search-box">
+            <input type="text" id="cityInput" placeholder="Enter city name (e.g., London)">
+            <button id="searchBtn">Search</button>
+        </div>
+
+        <div id="errorMsg" class="error-alert hidden"></div>
+
+        <div id="weatherData" class="weather-info hidden">
+            <h2 id="cityName">City Name</h2>
+            <img id="weatherIcon" src="" alt="Weather condition icon">
+            
+            <div class="stats">
+                <p class="temperature"><span id="temp">--</span>°C</p>
+                <p class="condition" id="condition">--</p>
+                <div class="details-grid">
+                    <div class="detail-card">Humidity<br><span id="humidity">--</span>%</div>
+                    <div class="detail-card">Wind Speed<br><span id="windSpeed">--</span> m/s</div>
+                    <div class="detail-card">Feels Like<br><span id="feelsLike">--</span>°C</div>
+                    <div class="detail-card">Pressure<br><span id="pressure">--</span> hPa</div>
+                    <div class="detail-card">UV Index<br><span id="uvIndex">--</span></div>
+                    <div class="detail-card">Visibility<br><span id="visibility">--</span> km</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="forecastControls" class="forecast-controls hidden">
+            <button class="forecast-btn" data-range="tomorrow">Tomorrow</button>
+            <button class="forecast-btn" data-range="3">Next 3 Days</button>
+            <button class="forecast-btn active" data-range="5">Next 5 Days</button>
+            <button class="forecast-btn" data-range="7">Next Week</button>
+            <button class="forecast-btn" data-range="10">Next 10 Days</button>
+        </div>
+
+        <div id="forecastData" class="forecast-section hidden">
+            <h2 id="forecastTitle">Next 5 Days</h2>
+            <div id="forecastList" class="forecast-list"></div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
